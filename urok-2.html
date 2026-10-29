@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2: Модель OSI и TCP/IP - IT Moskow wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">IT Moskow wiki</a>
+            <nav>
+                <a href="index.html">Главная</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <a href="predmet-web.html">Сети и интернет</a>
+            <span>/</span>
+            <span>Урок 2: Модель OSI и TCP/IP</span>
+        </div>
+
+        <h1>Урок 2: Модель OSI и TCP/IP</h1>
+
+        <div class="content-section">
+            <p>
+                <strong>OSI</strong> (Open Systems Interconnection) — эталонная модель, которая описывает
+                7 уровней передачи данных в сети. Каждый уровень решает свою задачу и общается только
+                с соседними уровнями. Модель придумана ISO в 1984 году.
+            </p>
+            <p>
+                На практике чаще используется модель <strong>TCP/IP</strong> (4 уровня), но OSI удобна
+                для понимания и обучения: она раскладывает сложный процесс передачи данных «по полочкам».
+            </p>
+        </div>
+
+        <div class="toc">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#glava-1">Глава 1: Семь уровней OSI</a></li>
+                <li><a href="#glava-2">Глава 2: Как данные идут по уровням</a></li>
+                <li><a href="#glava-3">Глава 3: OSI и TCP/IP</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="glava-1">
+            <h2>Глава 1: Семь уровней OSI</h2>
+            <p>
+                Уровни OSI (сверху вниз): <strong>Прикладной</strong> (HTTP, FTP, DNS, SMTP),
+                <strong>Представления</strong> (TLS/SSL, JPEG, ASCII), <strong>Сеансовый</strong> (RPC, NetBIOS),
+                <strong>Транспортный</strong> (TCP, UDP), <strong>Сетевой</strong> (IP, ICMP, роутеры),
+                <strong>Канальный</strong> (Ethernet, Wi-Fi, свитчи), <strong>Физический</strong> (кабели, разъёмы, сигналы).
+            </p>
+            <p>
+                Единицы данных: на физическом уровне — бит, на канальном — кадр (frame), на сетевом — пакет,
+                на транспортном — сегмент, на верхних — просто данные.
+            </p>
+            <p>
+                Мнемоника сверху вниз: <em>All People Seem To Need Data Processing</em>.
+                Снизу вверх: <em>Please Do Not Throw Sausage Pizza Away</em>.
+                По-русски: <em>«Принеси Пять Свежих Тёплых Сетевых Кабелей Фирме»</em>.
+            </p>
+        </div>
+
+        <div class="content-section" id="glava-2">
+            <h2>Глава 2: Как данные идут по уровням</h2>
+            <p>
+                При отправке происходит <strong>инкапсуляция</strong>: данные проходят сверху вниз
+                (7→6→5→4→3→2→1), и каждый уровень добавляет свой заголовок. Получается:
+                Данные → Сегмент → Пакет → Кадр → Бит.
+            </p>
+            <p>
+                При приёме происходит <strong>декапсуляция</strong>: данные идут снизу вверх (1→2→3→4→5→6→7),
+                и каждый уровень снимает свой заголовок. Аналогия — письмо: пишешь текст, кладёшь в конверт,
+                пишешь адрес, письмо проходит сортировочный центр и почтальона, получатель вскрывает
+                в обратном порядке.
+            </p>
+        </div>
+
+        <div class="content-section" id="glava-3">
+            <h2>Глава 3: OSI и TCP/IP</h2>
+            <p>
+                В модели TCP/IP всего 4 уровня: <strong>Прикладной</strong> (объединяет три верхних уровня OSI),
+                <strong>Транспортный</strong>, <strong>Межсетевой</strong> (соответствует сетевому уровню OSI)
+                и <strong>Канальный</strong> (объединяет канальный и физический).
+            </p>
+            <p>
+                Запомнить: OSI — теоретическая эталонная модель, TCP/IP — практическая, по которой реально
+                работает интернет. Но OSI остаётся удобным языком для описания сетевых проблем:
+                «проблема на канальном уровне» сразу говорит, где искать.
+            </p>
+        </div>
+
+        <a href="#top" class="back-to-top">↑ Наверх</a>
+        <a href="predmet-web.html" class="back-link">← К предмету</a>
+        <a href="index.html" class="back-link">На главную</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IT Moskow wiki. Все права защищены.</p>
+    </footer>
+</body>
+</html>

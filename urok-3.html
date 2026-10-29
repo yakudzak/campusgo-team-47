@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 3: HTTP и TCP - IT Moskow wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">IT Moskow wiki</a>
+            <nav>
+                <a href="index.html">Главная</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <a href="predmet-web.html">Сети и интернет</a>
+            <span>/</span>
+            <span>Урок 3: HTTP и TCP</span>
+        </div>
+
+        <h1>Урок 3: HTTP и TCP</h1>
+
+        <div class="content-section">
+            <p>
+                <strong>HTTP</strong> отвечает за то, <em>что сказать</em> (прикладной уровень),
+                а <strong>TCP</strong> — за то, <em>как гарантированно доставить</em> (транспортный уровень).
+                HTTP работает поверх TCP.
+            </p>
+            <p>
+                В этом уроке мы разберём, как устанавливается TCP-соединение, как устроены HTTP-запросы
+                и ответы, и что происходит, когда ты вводишь адрес в браузере.
+            </p>
+        </div>
+
+        <div class="toc">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#glava-1">Глава 1: TCP — надёжная доставка</a></li>
+                <li><a href="#glava-2">Глава 2: HTTP — запрос и ответ</a></li>
+                <li><a href="#glava-3">Глава 3: Как это работает вместе</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="glava-1">
+            <h2>Глава 1: TCP — надёжная доставка</h2>
+            <p>
+                TCP (Transmission Control Protocol) — транспортный протокол, который гарантирует доставку.
+                Перед передачей данных устанавливается соединение через <strong>тройное рукопожатие</strong>
+                (three-way handshake): клиент → сервер: <code>SYN</code> («хочу соединиться»),
+                сервер → клиент: <code>SYN-ACK</code> («ок, я готов»), клиент → сервер: <code>ACK</code>
+                («начинаем»). Только после этого передаются данные.
+            </p>
+            <p>
+                Ключевые свойства TCP: надёжность (каждый пакет подтверждается, потерялся — переотправка),
+                порядок (данные собираются в правильной последовательности), управление потоком
+                (быстрый отправитель не «затопит» медленного), порты (80 — HTTP, 443 — HTTPS, 22 — SSH).
+            </p>
+            <p>
+                Аналогия: TCP — телефонный разговор. «Алло? — Алло! — Слышно? — Да», потом говорите;
+                не расслышали — просите повторить.
+            </p>
+        </div>
+
+        <div class="content-section" id="glava-2">
+            <h2>Глава 2: HTTP — запрос и ответ</h2>
+            <p>
+                HTTP (HyperText Transfer Protocol) — прикладной протокол, работает поверх TCP.
+                Порты: <strong>80</strong> (HTTP) и <strong>443</strong> (HTTPS). Модель «запрос — ответ».
+                <strong>Stateless</strong> — не помнит предыдущие запросы.
+            </p>
+            <p>
+                Структура запроса: <code>GET /index.html HTTP/1.1</code> (метод, путь, версия), затем заголовки
+                (<code>Host</code>, <code>User-Agent</code>), пустая строка и тело (для POST/PUT).
+                Основные методы: <code>GET</code> (получить), <code>POST</code> (отправить),
+                <code>PUT</code> (заменить), <code>PATCH</code> (частично изменить), <code>DELETE</code> (удалить).
+            </p>
+            <p>
+                Коды статуса: <code>1xx</code> — информационные, <code>2xx</code> — успех
+                (<code>200 OK</code>, <code>201 Created</code>), <code>3xx</code> — перенаправление
+                (<code>301</code>, <code>302</code>), <code>4xx</code> — ошибка клиента
+                (<code>404 Not Found</code>, <code>403 Forbidden</code>), <code>5xx</code> — ошибка сервера
+                (<code>500 Internal Server Error</code>).
+            </p>
+        </div>
+
+        <div class="content-section" id="glava-3">
+            <h2>Глава 3: Как это работает вместе</h2>
+            <p>
+                Что происходит при вводе адреса в браузере:
+            </p>
+            <ol>
+                <li><strong>DNS</strong> превращает <code>example.com</code> в IP-адрес.</li>
+                <li><strong>TCP</strong> устанавливает соединение (three-way handshake) на порт 80/443.</li>
+                <li>Браузер шлёт <strong>HTTP-запрос</strong>.</li>
+                <li>Сервер обрабатывает и шлёт <strong>HTTP-ответ</strong>.</li>
+                <li>TCP гарантирует целостность и порядок данных.</li>
+                <li>Соединение закрывается (или переиспользуется — keep-alive).</li>
+            </ol>
+            <p>
+                Версии HTTP: <strong>HTTP/1.1</strong> — один запрос на соединение, keep-alive;
+                <strong>HTTP/2</strong> — мультиплексирование, параллельные запросы;
+                <strong>HTTP/3</strong> — работает поверх UDP (QUIC).
+            </p>
+        </div>
+
+        <a href="#top" class="back-to-top">↑ Наверх</a>
+        <a href="predmet-web.html" class="back-link">← К предмету</a>
+        <a href="index.html" class="back-link">На главную</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IT Moskow wiki. Все права защищены.</p>
+    </footer>
+</body>
+</html>

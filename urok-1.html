@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 1: Адресация в интернете - IT Moskow wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">IT Moskow wiki</a>
+            <nav>
+                <a href="index.html">Главная</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <a href="predmet-web.html">Сети и интернет</a>
+            <span>/</span>
+            <span>Урок 1: Адресация в интернете</span>
+        </div>
+
+        <h1>Урок 1: Адресация в интернете</h1>
+
+        <div class="content-section">
+            <p>
+                Чтобы компьютеры могли обмениваться данными, каждому устройству в сети нужен уникальный адрес.
+                В интернете используется несколько видов адресов: IP-адрес (числовой), DNS-имя (буквенное) и URL
+                (полный адрес ресурса).
+            </p>
+            <p>
+                В этом уроке мы разберём, как устроены IP-адреса, зачем нужна доменная система имён DNS
+                и из каких частей состоит URL.
+            </p>
+        </div>
+
+        <div class="toc">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#glava-1">Глава 1: IP-адрес</a></li>
+                <li><a href="#glava-2">Глава 2: DNS — доменная система имён</a></li>
+                <li><a href="#glava-3">Глава 3: URL — адрес ресурса</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="glava-1">
+            <h2>Глава 1: IP-адрес</h2>
+            <p>
+                <strong>IP-адрес</strong> — цифровой адрес устройства в сети. Он состоит из двух частей:
+                адреса сети и адреса компьютера внутри этой сети. Пример: <code>192.168.0.101</code>,
+                где <code>192</code> — подсеть интернета, <code>168</code> — подсеть 192, <code>0</code> — подсеть 168,
+                а <code>101</code> — номер компьютера.
+            </p>
+            <p>
+                IP-адреса бывают двух типов. <strong>Статический</strong> задаётся пользователем вручную и жёстко
+                закрепляется за устройством. <strong>Динамический</strong> присваивается специальным сервером
+                и может меняться при каждом подключении.
+            </p>
+            <p>
+                Чтобы разделить IP-адрес на адрес сети и адрес компьютера, используется <strong>маска</strong>.
+                IP-адрес и маска переводятся в двоичный вид, затем применяется побитовая операция AND.
+            </p>
+        </div>
+
+        <div class="content-section" id="glava-2">
+            <h2>Глава 2: DNS — доменная система имён</h2>
+            <p>
+                <strong>DNS</strong> (Domain Name System) — система, которая превращает понятные человеку буквенные
+                имена в IP-адреса. Например, имя <code>www.serge-fklamel.narod.ru</code> состоит из частей:
+                <code>www</code> — имя сервера, <code>serge-fklamel</code> — домен 3 уровня, <code>narod</code> —
+                домен 2 уровня, <code>.ru</code> — домен 1 уровня.
+            </p>
+            <p>
+                Домены первого уровня делятся на <strong>географические</strong> (<code>.ru</code>, <code>.ua</code>)
+                и <strong>административные</strong> (<code>.com</code>, <code>.edu</code>).
+            </p>
+        </div>
+
+        <div class="content-section" id="glava-3">
+            <h2>Глава 3: URL — адрес ресурса</h2>
+            <p>
+                <strong>URL</strong> (Uniform Resource Locator) — полный адрес ресурса в интернете.
+                Пример: <code>http://www.vasya.ru/images/new/qq.png</code>. Здесь
+                <code>http://www.vasya.ru</code> — главная страница сайта (обычно <code>index.html</code>),
+                а <code>qq.png</code> — конкретный файл на сайте.
+            </p>
+            <p>
+                Данные в интернете передаются <strong>пакетами</strong>: каждый файл делится на части размером
+                от 512 байт до 4 Кбайт. Правила обмена информацией между устройствами называются
+                <strong>протоколом</strong>.
+            </p>
+            <p>
+                Способы подключения к интернету: Dial-Up (по телефонной линии), через спутник, выделенный канал,
+                локальную сеть (LAN), мобильную сеть, беспроводное подключение (Bluetooth, Wi-Fi).
+            </p>
+        </div>
+
+        <a href="#top" class="back-to-top">↑ Наверх</a>
+        <a href="predmet-web.html" class="back-link">← К предмету</a>
+        <a href="index.html" class="back-link">На главную</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IT Moskow wiki. Все права защищены.</p>
+    </footer>
+</body>
+</html>
