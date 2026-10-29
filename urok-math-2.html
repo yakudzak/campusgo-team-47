@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2: Уравнения - IT Moskow wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">IT Moskow wiki</a>
+            <nav>
+                <a href="index.html">Главная</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <a href="predmet-math.html">Математика</a>
+            <span>/</span>
+            <span>Урок 2: Уравнения</span>
+        </div>
+
+        <h1>Урок 2: Уравнения</h1>
+
+        <div class="content-section">
+            <p>
+                <strong>Квадратное уравнение</strong> — уравнение вида <code>ax² + bx + c = 0</code>
+                (<code>a ≠ 0</code>). <strong>Кубическое уравнение</strong> — вида
+                <code>ax³ + bx² + cx + d = 0</code> (<code>a ≠ 0</code>).
+                <strong>Корень уравнения</strong> — значение переменной, при котором уравнение
+                превращается в верное равенство.
+            </p>
+            <p>
+                Здесь — формулы дискриминанта, корней и теоремы Виета для обоих типов уравнений.
+            </p>
+        </div>
+
+        <div class="toc">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#glava-1">Глава 1: Квадратное уравнение</a></li>
+                <li><a href="#glava-2">Глава 2: Теорема Виета</a></li>
+                <li><a href="#glava-3">Глава 3: Кубическое уравнение</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="glava-1">
+            <h2>Глава 1: Квадратное уравнение</h2>
+            <p>Уравнение <code>ax² + bx + c = 0</code>:</p>
+            <ul>
+                <li><strong>Дискриминант:</strong> <code>D = b² − 4ac</code></li>
+                <li><strong>Корни:</strong> <code>x₁,₂ = (−b ± √D) / (2a)</code></li>
+                <li><code>D &gt; 0</code> — два действительных корня</li>
+                <li><code>D = 0</code> — один корень (кратный)</li>
+                <li><code>D &lt; 0</code> — нет действительных корней</li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="glava-2">
+            <h2>Глава 2: Теорема Виета</h2>
+            <p>Если <code>x₁</code> и <code>x₂</code> — корни уравнения <code>ax² + bx + c = 0</code>, то:</p>
+            <ul>
+                <li><code>x₁ + x₂ = −b / a</code></li>
+                <li><code>x₁ · x₂ = c / a</code></li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="glava-3">
+            <h2>Глава 3: Кубическое уравнение</h2>
+            <p>Уравнение <code>ax³ + bx² + cx + d = 0</code>:</p>
+            <ul>
+                <li><strong>Приведение:</strong> замена <code>x = y − b/(3a)</code> даёт вид <code>y³ + py + q = 0</code></li>
+                <li><code>p = (3ac − b²) / (3a²)</code>, <code>q = (2b³ − 9abc + 27a²d) / (27a³)</code></li>
+                <li><strong>Дискриминант:</strong> <code>Δ = (q/2)² + (p/3)³</code></li>
+                <li><code>Δ &gt; 0</code> — один действительный корень, <code>Δ = 0</code> — кратные корни, <code>Δ &lt; 0</code> — три действительных корня</li>
+                <li><strong>Формула Кардано:</strong> <code>y = ∛(−q/2 + √Δ) + ∛(−q/2 − √Δ)</code></li>
+                <li><strong>Виета:</strong> <code>x₁+x₂+x₃ = −b/a</code>, <code>x₁x₂+x₁x₃+x₂x₃ = c/a</code>, <code>x₁x₂x₃ = −d/a</code></li>
+            </ul>
+        </div>
+
+        <a href="#top" class="back-to-top">↑ Наверх</a>
+        <a href="predmet-math.html" class="back-link">← К предмету</a>
+        <a href="index.html" class="back-link">На главную</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IT Moskow wiki. Все права защищены.</p>
+    </footer>
+</body>
+</html>

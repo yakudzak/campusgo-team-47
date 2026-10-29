@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 3: Функции - IT Moskow wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">IT Moskow wiki</a>
+            <nav>
+                <a href="index.html">Главная</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <a href="predmet-math.html">Математика</a>
+            <span>/</span>
+            <span>Урок 3: Функции</span>
+        </div>
+
+        <h1>Урок 3: Функции</h1>
+
+        <div class="content-section">
+            <p>
+                <strong>Функция</strong> — правило, по которому каждому значению <code>x</code> из области
+                определения сопоставляется единственное значение <code>y</code>.
+                <strong>Область определения D(y)</strong> — множество допустимых <code>x</code>,
+                <strong>область значений E(y)</strong> — множество значений <code>y</code>.
+            </p>
+            <p>
+                В этом уроке — краткие свойства линейной и квадратичной функций, параболы и гиперболы.
+            </p>
+        </div>
+
+        <div class="toc">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#glava-1">Глава 1: Линейная функция</a></li>
+                <li><a href="#glava-2">Глава 2: Квадратичная функция и парабола</a></li>
+                <li><a href="#glava-3">Глава 3: Гипербола</a></li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="glava-1">
+            <h2>Глава 1: Линейная функция</h2>
+            <p><strong>Линейная функция</strong> — <code>y = kx + b</code>. График — прямая.
+                <code>k</code> — угловой коэффициент (тангенс угла наклона), <code>b</code> — ордината
+                точки пересечения с осью Oy.</p>
+            <ul>
+                <li><strong>D(y):</strong> x ∈ ℝ; <strong>E(y):</strong> y ∈ ℝ (при k ≠ 0)</li>
+                <li><strong>Монотонность:</strong> k &gt; 0 — возрастает, k &lt; 0 — убывает, k = 0 — постоянна</li>
+                <li><strong>Нуль:</strong> x = −b/k (при k ≠ 0)</li>
+                <li><strong>Чётность:</strong> нечётная только при b = 0</li>
+                <li><strong>Пересечения:</strong> с Oy — (0, b); с Ox — (−b/k, 0)</li>
+                <li>Экстремумов нет, неограниченна</li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="glava-2">
+            <h2>Глава 2: Квадратичная функция и парабола</h2>
+            <p><strong>Квадратичная функция</strong> — <code>y = ax² + bx + c</code> (a ≠ 0).
+                График — <strong>парабола</strong>: a &gt; 0 — ветви вверх, a &lt; 0 — вниз.
+                <strong>Парабола</strong> <code>y = ax²</code> — частный случай с вершиной в (0, 0).</p>
+            <ul>
+                <li><strong>D(y):</strong> x ∈ ℝ</li>
+                <li><strong>Вершина:</strong> x₀ = −b/(2a), y₀ = c − b²/(4a)</li>
+                <li><strong>Ось симметрии:</strong> x = −b/(2a)</li>
+                <li><strong>Монотонность:</strong> при a &gt; 0 убывает на (−∞, x₀], возрастает на [x₀, +∞); при a &lt; 0 — наоборот</li>
+                <li><strong>Экстремум:</strong> минимум при a &gt; 0, максимум при a &lt; 0, в вершине</li>
+                <li><strong>Нули:</strong> x = (−b ± √D)/(2a), D = b² − 4ac</li>
+                <li><strong>Чётность:</strong> чётная только при b = 0</li>
+                <li><strong>E(y):</strong> при a &gt; 0 — [y₀, +∞); при a &lt; 0 — (−∞, y₀]</li>
+                <li>Чем больше |a|, тем «уже» парабола</li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="glava-3">
+            <h2>Глава 3: Гипербола</h2>
+            <p><strong>Гипербола</strong> — график обратной пропорциональности <code>y = k/x</code> (k ≠ 0).
+                Две ветви; оси координат — <strong>асимптоты</strong> (прямые, к которым график
+                приближается, но не пересекает).</p>
+            <ul>
+                <li><strong>D(y):</strong> x ≠ 0; <strong>E(y):</strong> y ≠ 0</li>
+                <li><strong>Монотонность:</strong> k &gt; 0 — убывает на (−∞, 0) и на (0, +∞); k &lt; 0 — возрастает на каждом из промежутков</li>
+                <li><strong>Чётность:</strong> нечётная (симметрия относительно начала координат)</li>
+                <li>Нулей нет, экстремумов нет, неограниченна</li>
+                <li><strong>Расположение:</strong> k &gt; 0 — I и III четверти; k &lt; 0 — II и IV четверти</li>
+                <li><strong>Асимптоты:</strong> вертикальная x = 0, горизонтальная y = 0</li>
+            </ul>
+        </div>
+
+        <a href="#top" class="back-to-top">↑ Наверх</a>
+        <a href="predmet-math.html" class="back-link">← К предмету</a>
+        <a href="index.html" class="back-link">На главную</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IT Moskow wiki. Все права защищены.</p>
+    </footer>
+</body>
+</html>
